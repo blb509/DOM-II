@@ -24,4 +24,20 @@ title.addEventListener('click', e => {
     e.stopPropagation();
 });
 
+const funBus = document.querySelector('.intro img');
+funBus.addEventListener('wheel', e => {
+    funBus.style.display = "none";
+});
+
+const center = document.querySelector('.intro h2');
+center.addEventListener('dblclick', e => {
+    center.style.padding = "0 0 0 30% ";
+});
+
+const map = document.querySelector('.content-section .img-content img');
+map.addEventListener('mouseup', e => {
+    alert("You shouldn't put that many drinks near a map!");
+});
+
+
 
