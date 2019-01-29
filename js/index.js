@@ -5,6 +5,13 @@ nav.addEventListener('mouseover', e => {
     nav.style.justifyContent = "space-between";
 });
 
+const a = document.querySelectorAll('a');
+a.forEach(element =>{
+    element.addEventListener('click', e => {
+        e.preventDefault();
+    });
+});
+
 const body = document.querySelector('body');
 body.addEventListener('keydown', e => {
     body.style.zoom = "120%";
@@ -39,5 +46,15 @@ map.addEventListener('mouseup', e => {
     alert("You shouldn't put that many drinks near a map!");
 });
 
+const border = document.querySelector('img');
+border.addEventListener('mouseenter', e => {
+    border.style.border = "5px solid black";
+});
 
+border.addEventListener('mouseout', e => {
+    border.style.border = "none";
+});
 
+window.addEventListener('beforeprint', e => {
+    alert("Print at your own Peril!!!");
+});
